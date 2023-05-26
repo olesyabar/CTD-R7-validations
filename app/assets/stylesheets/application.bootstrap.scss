@@ -11,3 +11,27 @@ $fa-font-path: "./webfonts";
 .my_alert {
   color: red;
 }
+
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('LEMONMILK-Light.otf');
+}
+ 
+h1 {
+    font-family: 'LemonMilk';
+}
+
+.banner-background {
+  background-image: url('background.jpg');
+  background-size: cover;
+}
+
+@font-face {
+    font-family: 'LemonMilk2';
+    src: url('LEMONMILK-BoldItalic.otf');
+}
+
+.banner-text {
+  font-family: 'LemonMilk2';
+  text-align: center;
+}

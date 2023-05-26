@@ -3,10 +3,9 @@
 <%= render @customer %>
 
 <div>
-  <%= link_to "Edit this customer", edit_customer_path(@customer) %> |
-  <%= link_to "Back to customers", customers_path %>
-
-  <%= button_to "Destroy this customer", @customer, method: :delete %>
+  <%= link_to "Edit this customer", edit_customer_path(@customer), class: "btn btn-primary" %> |
+  <%= link_to "Back to customers", customers_path, class: "btn btn-primary" %>
+  <%= button_to "Destroy this customer", @customer, method: :delete, class: "btn btn-outline-danger my-2" %>
 </div>
 
 <% if @customer.orders.present? %>
@@ -24,9 +23,9 @@
         <tr>
           <td><%= order.id %></td>
           <td><%= order.product_name %></td>
-          <td><%= link_to 'Show', order %></td>
-          <td><%= link_to 'Edit', edit_order_path(order) %></td>
-          <td><%= button_to "Destroy", order, method: :delete, data: { turbo_confirm: "Are you sure?"} %></td>
+          <td><%= link_to 'Show', order, class: "btn btn-primary mx-1" %></td>
+          <td><%= link_to 'Edit', edit_order_path(order), class: "btn btn-primary mx-1" %></td>
+          <td><%= button_to "Destroy", order, method: :delete, data: { turbo_confirm: "Are you sure?"}, class: "btn btn-outline-danger mx-1" %></td>
         </tr>
       <% end %>
     </tbody>

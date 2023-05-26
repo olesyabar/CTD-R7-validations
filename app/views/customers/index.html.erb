@@ -4,11 +4,13 @@
 
 <div id="customers">
   <% @customers.each do |customer| %>
-    <%= render customer %>
-    <p>
-      <%= link_to "Show this customer", customer %>
-    </p>
+    <div class="card shadow p-3 mb-2 bg-white rounded">
+      <%= render customer %>
+      <p>
+        <%= link_to "Show this customer", customer, class: "btn btn-primary" %>
+      </p>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New customer", new_customer_path %>
+<%= link_to "New customer", new_customer_path, class: "btn btn-success" %>
